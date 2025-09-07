@@ -6,12 +6,12 @@ function Clients() {
   const clients = [
     { id: 1, name: 'Client 1', logo: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcGFueXxlbnwwfHwwfHx8MA%3D%3D' },
     { id: 2, name: 'Client 2', logo: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcGFueXxlbnwwfHwwfHx8MA%3D%3D' },
-    { id: 3, name: 'Client 3', logo: '/photo/img3.jpg' },
-    { id: 4, name: 'Client 4', logo: '/photo/img4.webp' },
-    { id: 5, name: 'Client 5', logo: '/photo/img5.avif' },
-    { id: 6, name: 'Client 6', logo: '/photo/img6.jpg' },
-    { id: 7, name: 'Client 7', logo: '/photo/img7.webp' },
-    { id: 8, name: 'Client 8', logo: '/photo/img8.avif' }
+    { id: 3, name: 'Client 3', logo: 'https://static.startuptalky.com/2022/10/top-tech-companies-startuptalky.jpg' },
+    { id: 4, name: 'Client 4', logo: 'https://www.consultancy-me.com/illustrations/news/detail/2023-05-02-105349421-The_20_fastest_growing_tech_companies_in_the_Middle_East.jpg' },
+    { id: 5, name: 'Client 5', logo: 'https://media.licdn.com/dms/image/v2/D5612AQG0I2ZARFrZKw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1700904908292?e=2147483647&v=beta&t=6dFdt8K-NxS3TEtG7sYNPKLlAkfT49MuLk2HzYzM2lA' },
+    { id: 6, name: 'Client 6', logo: 'https://fabrikbrands.com/wp-content/uploads/Technology-Company-Logos-1.png' },
+    { id: 7, name: 'Client 7', logo: 'https://static.toiimg.com/thumb/msid-16437488,width-1070,height-580,imgsize-40142,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg' },
+    { id: 8, name: 'Client 8', logo: 'https://i.pinimg.com/474x/60/55/bc/6055bcec8867c55a0e655211994a2029.jpg' }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

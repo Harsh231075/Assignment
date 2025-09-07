@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FileText, Calculator, Briefcase, Building2, CreditCard, UserCheck
-  , Zap, Shield, Heart, MessageCircle
+  , Zap, Shield, Heart, MessageCircle, ChevronDown, HelpCircle
 
 } from 'lucide-react';
 
 const ServicesSection = () => {
+  const [openFaq, setOpenFaq] = useState(null);
   const services = [
     {
       id: 1,
@@ -90,6 +91,24 @@ const ServicesSection = () => {
         "Renewal Support"
       ],
       buttonText: "Protect Brand"
+    }
+  ];
+  const faqs = [
+    {
+      q: "How long does GST registration take?",
+      a: "GST registration usually takes 3-7 working days, depending on document verification and government processing times."
+    },
+    {
+      q: "Can you help with company incorporation?",
+      a: "Yes, we provide complete support for private limited, LLP, and partnership firm registrations including all legal formalities."
+    },
+    {
+      q: "What documents are needed for trademark registration?",
+      a: "You need a logo, business details, and proof of identity. Our team will guide you through the entire process."
+    },
+    {
+      q: "Do you offer tax planning advice?",
+      a: "Absolutely! Our experts provide tax planning and advisory services to maximize your savings and ensure compliance."
     }
   ];
 
@@ -185,6 +204,48 @@ const ServicesSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* FAQ Section (FCQS) */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">
+              <HelpCircle size={16} /> FAQs
+            </div>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-3 text-gray-600 text-lg">Find answers to common queries about our services and processes.</p>
+          </div>
+
+          <div className="divide-y divide-gray-200 rounded-2xl bg-white shadow-xl overflow-hidden">
+            {faqs.map((item, idx) => {
+              const open = openFaq === idx;
+              return (
+                <div key={idx} className="group">
+                  <button
+                    onClick={() => setOpenFaq(open ? null : idx)}
+                    className="w-full flex items-center justify-between p-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    aria-expanded={open}
+                    aria-controls={`faq-panel-${idx}`}
+                  >
+                    <span className="font-semibold text-gray-900">{item.q}</span>
+                    <ChevronDown
+                      className={`text-gray-500 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+                      size={20}
+                    />
+                  </button>
+                  <div
+                    id={`faq-panel-${idx}`}
+                    className={`px-5 pb-5 text-gray-600 leading-relaxed transition-all duration-300 ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+                  >
+                    {item.a}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -173,24 +173,24 @@ const Home = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-blue-600 text-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold mb-2">10K+</div>
-                <div className="text-blue-200">Happy Customers</div>
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+                <div className="text-4xl font-extrabold mb-2 text-blue-600">10K+</div>
+                <div className="text-gray-500 font-medium">Happy Customers</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">99.9%</div>
-                <div className="text-blue-200">Uptime</div>
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+                <div className="text-4xl font-extrabold mb-2 text-green-500">99.9%</div>
+                <div className="text-gray-500 font-medium">Uptime</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">50+</div>
-                <div className="text-blue-200">Countries</div>
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+                <div className="text-4xl font-extrabold mb-2 text-purple-500">50+</div>
+                <div className="text-gray-500 font-medium">Countries</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200">Support</div>
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+                <div className="text-4xl font-extrabold mb-2 text-pink-500">24/7</div>
+                <div className="text-gray-500 font-medium">Support</div>
               </div>
             </div>
           </div>

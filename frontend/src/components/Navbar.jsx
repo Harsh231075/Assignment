@@ -29,12 +29,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm px-4 py-4 flex items-center justify-between relative border-b border-gray-100">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur px-6 md:px-10 py-4 flex items-center justify-between relative border-b border-gray-100 shadow-sm">
 
       {/* Logo Section */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 pl-1">
         <div className="font-extrabold text-3xl">
-          <img src="https://previews.123rf.com/images/lkeskinen/lkeskinen1611/lkeskinen161100142/66734911-assignment-rubber-stamp-grunge-design-with-dust-scratches-effects-can-be-easily-removed-for-a.jpg" alt="All Solution" className="h-16 w-auto rounded-lg shadow-lg" />
+          <img src="https://previews.123rf.com/images/lkeskinen/lkeskinen1611/lkeskinen161100142/66734911-assignment-rubber-stamp-grunge-design-with-dust-scratches-effects-can-be-easily-removed-for-a.jpg" alt="All Solution" className="h-12 md:h-14 w-auto rounded-lg shadow-lg" />
         </div>
       </div>
 
